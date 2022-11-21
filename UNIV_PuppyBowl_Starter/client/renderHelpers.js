@@ -89,6 +89,8 @@ export const renderSinglePlayer = (playerObj) => {
   seeAll.addEventListener('click', async () => {
     let players = await fetchAllPlayers();
     renderAllPlayers(players);
+    seeAll.removeEventListener('moveover');
+    seeAll.removeEventListener('moveout');
   })
 };
 
